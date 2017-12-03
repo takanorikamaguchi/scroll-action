@@ -12,10 +12,10 @@ body *{
 	background-color: #ccc;
 }
 .section-area p{
-	background-color: #ff0;
 }
 
 .section-box{
 	opacity: 0;
 	margin-top: 30px;
 }
+
