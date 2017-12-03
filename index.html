@@ -37,8 +37,16 @@
                 <p class="section4-box-txt">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
             </div>
         </section>
+        <section class="section-area section4">
+            <h2>scroll4</h2>
+            <div class="section-click-box">
+                <p class="section4-box-txt">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+            </div>
+        </section>
+        <p id="aaaaa">t<strong>es</strong>t</p>
     </div>
-    <script src="js/jquery-1.9.1.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script>
     <script>
     $(function() {
         $(window).scroll(function() {
@@ -77,7 +85,34 @@
             }
         });
 
+$(".section-click-box").on("click", function(){
+   var $this = $(this),
+        speed = 2000;
+   $this.children('p').animate({
+       backgroundColor: "#cccccc",
+       marginTop: "-10px"},
+       speed, function() {
+        $this.children('p').animate({
+       backgroundColor: "#ff0",
+       marginTop: "10px",
+   fontSize: "3em"},
+       1000, "linear");});
+});
+
     });
+
+var ttt = document.getElementById('aaaaa');
+
+var child = ttt.childNodes;
+var tnode = child.item(1).childNodes[0];
+
+var ooo = document.createElement("div");
+var pppp = document.createTextNode("ノーどです。");
+
+ooo.appendChild(pppp);
+
+ttt.appendChild(ooo);
+
     </script>
 </body>
 
